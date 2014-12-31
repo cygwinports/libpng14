@@ -1,0 +1,19 @@
+NAME="libpng14"
+VERSION=1.4.14
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="PNG library"
+DESCRIPTION="libpng is the official reference library for the Portable Network
+Graphics (PNG) image format."
+HOMEPAGE="http://libpng.sourceforge.net/"
+SRC_URI="mirror://sourceforge/libpng/libpng-${VERSION}.tar.xz"
+SRC_DIR="libpng-${VERSION}"
+PATCH_URI="1.4.14-configure-cygwin.patch"
+
+ARCH=i686 # for backwards compatibility only
+
+PKG_NAMES="libpng14 libpng14-devel"
+libpng14_CONTENTS="usr/bin/cygpng14-14.dll usr/share/doc/"
+libpng14_devel_CONTENTS="usr/bin/libpng14-config usr/include/libpng14/ usr/lib/libpng14.* usr/lib/pkgconfig/libpng14.pc"
+PKG_IGNORE="usr/bin/libpng-config usr/include/*.h usr/lib/libpng.*
+	usr/lib/pkgconfig/libpng.pc usr/share/man/"
