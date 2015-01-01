@@ -8,7 +8,10 @@ Graphics (PNG) image format."
 HOMEPAGE="http://libpng.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libpng/libpng-${VERSION}.tar.xz"
 SRC_DIR="libpng-${VERSION}"
-PATCH_URI="1.4.14-configure-cygwin.patch"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/libpng12.git/plain/libpng12-CVE-2013-6954.patch
+	1.4.14-configure-cygwin.patch
+"
 
 ARCH=i686 # for backwards compatibility only
 
